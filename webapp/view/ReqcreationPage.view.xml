@@ -1,0 +1,433 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.ReqcreationPage"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:tnt="sap.tnt"
+	xmlns:u="sap.ui.unified">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<f:Form id="Form" editable="true" class="Form sapUiSmallMarginBottom">
+						<f:layout>
+							<f:ResponsiveGridLayout singleContainerFullSize="false" columnsL="1" columnsM="1" labelSpanL="4" labelSpanM="1"/>
+						</f:layout>
+						<f:formContainers>
+							<f:FormContainer >
+								<f:formElements>
+									<f:FormElement >
+										<f:fields>
+											<VBox class="sapUiSmallMarginEnd">
+												<layoutData>
+													<layout:GridData span="L2 M2 S12"/>
+												</layoutData>
+												<Label text="BU" class="col"></Label>
+												<ComboBox class="CustName" placeholder="Select BU" selectionChange="handleBUSelectionChange" width="100%">
+													<core:Item key="XXXX" text="XXXXX"/>
+													<core:Item key="YYYY" text="YYYYY"/>
+													<core:Item key="ZZZZ" text="ZZZZZ"/>
+													<core:Item key="DDDD" text="DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"/>
+												</ComboBox>
+											</VBox>
+											<VBox class="sapUiTinyMarginEnd">
+												<layoutData>
+													<layout:GridData span="L2 M2 S12"/>
+												</layoutData>
+												<Label text="Sub-Ctry" class="col"></Label>
+												<ComboBox class="prodgrp" placeholder="SUBCU" selectionChange="handleSUBCUPSelectionChange" width="100%">
+													<core:Item key="ZXC" text="ZXCV"/>
+													<core:Item key="MNB" text="MNBV"/>
+													<core:Item key="ASD" text="ASDF"/>
+													<core:Item key="LKJ" text="LKJH"/>
+												</ComboBox>
+											</VBox>
+											<VBox class="sapUiTinyMarginEnd">
+												<layoutData>
+													<layout:GridData span="L2 M2 S12"/>
+												</layoutData>
+												<Label text="Something" class="col"></Label>
+												<ComboBox class="prodgrp" placeholder="Something" selectionChange="handleSUBCUPSelectionChange" width="100%">
+													<core:Item key="ZXC" text="ZXCV"/>
+													<core:Item key="MNB" text="MNBV"/>
+													<core:Item key="ASD" text="ASDF"/>
+													<core:Item key="LKJ" text="LKJH"/>
+												</ComboBox>
+											</VBox>
+											<VBox class="sapUiSmallMarginTop sapUiTinyMarginEnd">
+												<layoutData>
+													<layout:GridData span="L3 M3 S12"/>
+												</layoutData>
+												<HBox class="sapUiTinyMarginTop">
+													<Label text="Country :" class="col"></Label>
+													<Label text="ASD" class="sapUiTinyMarginBeginEnd col"></Label>
+												</HBox>
+												<HBox>
+													<Label text="Customer :" class="col"></Label>
+													<Label text="123456789-0123456" class="col sapUiTinyMarginBeginEnd"></Label>
+												</HBox>
+											</VBox>
+											<VBox class="sapUiMediumMarginBegin">
+												<layoutData>
+													<layout:GridData span="L3 M3 S12"/>
+												</layoutData>
+												<tnt:InfoLabel text="Submitted" class="sapUiLargeMarginBegin xxx" renderMode="Narrow" colorScheme="3" displayOnly="true"/>
+												<CheckBox selected="true" valueState="Error" class="chk col" editable="false" text="Global Submission"></CheckBox>
+											</VBox>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+						</f:formContainers>
+					</f:Form>
+					<Panel>
+						<headerToolbar>
+							<Toolbar>
+								<Title level="H2" text="Drafts(Summm)"/>
+							</Toolbar>
+						</headerToolbar>
+						<!--							<Table  id="idProductsTabl" inset="false" class="sapUiMediumMarginBottom" items="{ path: '/ProductSet'}" growing="true" growingThreshold="10" growingScrollToLoad="false">
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Product"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Supplier"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" width="6rem">
+										<Text text="Dimensions"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{ProductID}"/>
+											<Text text="{Name}"/>
+											<Text text="{SupplierName}"/>
+											<Input value="{Width}"/>
+											<Input value="{Depth}"/>
+											<Input value="{Height}"/>
+											<Text text="asdf"/>
+											<Text text="fas"/>
+											<Text text="{Width} x {Depth} x {Height}"/>
+											<Input value="45"/>
+											<Input/>
+											<Input/>
+											<Text text="asdf"/>
+											<Text text="fas"/>
+											<Text text="{Width} x {Depth} x {Height}"/>
+											<Input value="45"/>
+											<Input/>
+											<Input/>
+											<Text text="asdf"/>
+											<Text text="fas"/>
+											<Text text="{Width} x {Depth} x {Height}"/>
+											<Input value="45"/>
+											<Input/>
+											<Input/>
+											<Text text="asdf"/>
+											<Text text="fas"/>
+											<Text text="{Width} x {Depth} x {Height}"/>
+											<Input value="45"/>
+											<Input/>
+											<Input/>
+											<Text text="asdf"/>
+											<Text text="fas"/>
+											<Text text="{Width} x {Depth} x {Height}"/>
+											<Input value="45"/>
+											<Input/>
+											<Input/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+					</Panel>
+					<f:SimpleForm editable="true">
+						<f:content>
+							<VBox>
+								<HBox class="sapUiMediumMarginBottom">
+									<u:FileUploader id="idfileUploader" width="100%" sameFilenameAllowed="false" placeholder="Choose a CSV file" style="Emphasized"></u:FileUploader>
+									<Button text="Upload" press="onUpload" class="sapUiTinyMarginBegin"></Button>
+								</HBox>
+								<VBox class="sapUiMediumMarginBottom">
+									<HBox>
+										<Link text="Document1.txt" class="sapUiLargeMarginEnd"></Link>
+										<Button icon="sap-icon://decline" class="sapUiLargeMarginEnd"></Button>
+										<Button icon="sap-icon://delete" class="sapUiLargeMarginEnd"></Button>
+									</HBox>
+									<HBox>
+										<Link text="Documentw.txt" class="sapUiLargeMarginEnd"></Link>
+										<Button icon="sap-icon://decline" class="sapUiLargeMarginEnd"></Button>
+										<Button icon="sap-icon://delete" class="sapUiLargeMarginEnd"></Button>
+									</HBox>
+								</VBox>
+								<Panel expandable="true">
+									<headerToolbar>
+										<Toolbar>
+											<Title level="H2" text="Commets"/>
+										</Toolbar>
+									</headerToolbar>
+									<TextArea id="TextArea" cols="100" height="100px"/>
+								</Panel>
+								<Panel expandable="true">
+									<headerToolbar>
+										<Toolbar>
+											<Title level="H2" text="Drafts"/>
+										</Toolbar>
+									</headerToolbar>
+									<Table id="idProductsTab" inset="false" class="sapUiSmallMarginTopBottom">
+										<columns>
+											<Column >
+												<Text text="Product"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Supplier"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Dimensions"/>
+											</Column>
+											<Column >
+												<Text text="Product"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Supplier"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Dimensions"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem>
+												<cells>
+													<Text text="asdf"/>
+													<Text text="fas"/>
+													<Text text="{Width} x {Depth} x {Height}"/>
+													<Input value="45"/>
+													<Input/>
+													<Input/>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>-->
+						<List items="{ path: '/ProductSet'}" growing="true" growingThreshold="10"
+							growingScrollToLoad="false">
+								<ColumnListItem>
+									<cells>
+										<Text text="{ProductID}"/>
+										<Text text="{Name}"/>
+										<Text text="{SupplierName}"/>
+										<Input value="{Width}"/>
+										<Input value="{Depth}"/>
+										<Input value="{Height}"/>
+										<Text text="asdf"/>
+										<Text text="fas"/>
+										<Text text="{Width} x {Depth} x {Height}"/>
+										<Input value="45"/>
+										<Input/>
+										<Input/>
+										<Text text="asdf"/>
+										<Text text="fas"/>
+										<Text text="{Width} x {Depth} x {Height}"/>
+										<Input value="45"/>
+										<Input/>
+										<Input/>
+										<Text text="asdf"/>
+										<Text text="fas"/>
+										<Text text="{Width} x {Depth} x {Height}"/>
+										<Input value="45"/>
+										<Input/>
+										<Input/>
+										<Text text="asdf"/>
+										<Text text="fas"/>
+										<Text text="{Width} x {Depth} x {Height}"/>
+										<Input value="45"/>
+										<Input/>
+										<Input/>
+										<Text text="asdf"/>
+										<Text text="fas"/>
+										<Text text="{Width} x {Depth} x {Height}"/>
+										<Input value="45"/>
+										<Input/>
+										<Input/>
+									</cells>
+								</ColumnListItem>
+						</List>
+					</Panel>
+					<f:SimpleForm editable="true">
+						<f:content>
+							<VBox>
+								<HBox class="sapUiMediumMarginBottom">
+									<u:FileUploader id="idfileUploader" width="100%" sameFilenameAllowed="false" placeholder="Choose a CSV file" style="Emphasized"></u:FileUploader>
+									<Button text="Upload" press="onUpload" class="sapUiTinyMarginBegin"></Button>
+								</HBox>
+								<VBox class="sapUiMediumMarginBottom">
+									<HBox>
+										<Link text="Document1.txt" class="sapUiLargeMarginEnd"></Link>
+										<Button icon="sap-icon://decline" class="sapUiLargeMarginEnd"></Button>
+										<Button icon="sap-icon://delete" class="sapUiLargeMarginEnd"></Button>
+									</HBox>
+									<HBox>
+										<Link text="Documentw.txt" class="sapUiLargeMarginEnd"></Link>
+										<Button icon="sap-icon://decline" class="sapUiLargeMarginEnd"></Button>
+										<Button icon="sap-icon://delete" class="sapUiLargeMarginEnd"></Button>
+									</HBox>
+								</VBox>
+								<Panel expandable="true">
+									<headerToolbar>
+										<Toolbar>
+											<Title level="H2" text="Commets"/>
+										</Toolbar>
+									</headerToolbar>
+									<TextArea id="TextArea" cols="100" height="100px"/>
+								</Panel>
+								<Panel expandable="true">
+									<headerToolbar>
+										<Toolbar>
+											<Title level="H2" text="Drafts"/>
+										</Toolbar>
+									</headerToolbar>
+									<Table id="idProductsTab" inset="false" class="sapUiSmallMarginTopBottom">
+										<columns>
+											<Column >
+												<Text text="Product"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Supplier"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Dimensions"/>
+											</Column>
+											<Column >
+												<Text text="Product"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Supplier"/>
+											</Column>
+											<Column demandPopin="true">
+												<Text text="Dimensions"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem>
+												<cells>
+													<Text text="asdf"/>
+													<Text text="fas"/>
+													<Text text="{Width} x {Depth} x {Height}"/>
+													<Input value="45"/>
+													<Input/>
+													<Input/>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</Panel>
+								<FlexBox alignItems="End" justifyContent="End">
+									<items>
+										<Button text="Validate/Save" class="sapUiSmallMarginEnd"/>
+										<Button text="Upload File" class="sapUiSmallMarginEnd"/>
+										<Button text="Submit Data" press=".onSubmitpress"/>
+									</items>
+								</FlexBox>
+							</VBox>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

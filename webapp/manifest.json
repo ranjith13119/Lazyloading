@@ -1,0 +1,225 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "iconT.IconT",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"odataV2": {
+				"uri": "/destinations/ES5/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"fullWidth": true,
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "iconT.IconT.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "iconT.IconT.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "odataV2",
+				"settings": {
+					"operationMode": "Server"
+				}
+			},
+			"init_data": {
+				"type": "sap.ui.model.json.JSONModel"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "iconT.IconT.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteApp",
+					"pattern": "RouteApp",
+					"target": [
+						"TargetApp"
+					]
+				},
+				{
+					"name": "ReqcreationPage",
+					"pattern": "sdf",
+					"target": [
+						"ReqcreationPage"
+					]
+				},
+				{
+					"name": "Tab22",
+					"pattern": "Subtab2:?query:",
+					"target": [
+						"Fioritab2"
+					]
+				},
+				{
+					"name": "Home",
+					"pattern": ":?query:",
+					"target": [
+						"home"
+					]
+				},
+				{
+					"name": "CPRequest",
+					"pattern": "CPCreate",
+					"target": [
+						"CPSRequest"
+					]
+				},
+				{
+					"name": "CSPDialog",
+					"pattern": "CSPDialog",
+					"target": [
+						"CSPDialog"
+					]
+				},
+				{
+					"name": "CPSSubmit",
+					"pattern": "CPSSubmit",
+					"target": "CPSSubmit"
+				}
+			],
+			"targets": {
+				"TargetApp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App",
+					"viewName": "App"
+				},
+				"home": {
+					"viewType": "XML",
+					"viewName": "home",
+					"transition": "slide",
+					"clearControlAggregation": false
+				},
+				"Fioritab2": {
+					"parent": "home",
+					"viewPath": "iconT.IconT.view",
+					"viewName": "tab1",
+					"controlId": "tab2",
+					"controlAggregation": "content"
+				},
+				"Fioritab3": {
+					"parent": "home",
+					"viewPath": "iconT.IconT.view",
+					"viewName": "tab2",
+					"controlId": "tab3",
+					"controlAggregation": "content"
+				},
+				"Fioritab4": {
+					"parent": "home",
+					"viewPath": "iconT.IconT.view",
+					"viewName": "tab3",
+					"controlId": "tab4",
+					"controlAggregation": "content"
+				},
+				"CSPDialog": {
+					"viewType": "XML",
+					"viewPath": "iconT.IconT.view.Subtab2",
+					"viewName": "tab22"
+				},
+				"Subtab23": {
+					"parent": "Fioritab2",
+					"viewType": "XML",
+					"viewPath": "iconT.IconT.view.Subtab2",
+					"viewName": "tab23",
+					"controlId": "tab23",
+					"controlAggregation": "content"
+				},
+				"Subtab21": {
+					"parent": "Fioritab2",
+					"viewType": "XML",
+					"viewPath": "iconT.IconT.view.Subtab2",
+					"viewName": "tab21",
+					"controlId": "tab21",
+					"controlAggregation": "content"
+				},
+				"Subtab22": {
+					"parent": "Fioritab2",
+					"viewType": "XML",
+					"viewPath": "iconT.IconT.view.Subtab2",
+					"viewName": "tab22",
+					"controlId": "tab22",
+					"controlAggregation": "content"
+				},
+				"CPSSubmit": {
+					"viewType": "XML",
+					"viewName": "RequestCreation"
+				},
+				"ReqcreationPage": {
+					"viewType": "XML",
+					"viewName": "ReqcreationPage"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

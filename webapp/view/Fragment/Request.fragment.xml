@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<Dialog afterClose="onAfterClose" class="sapUiResponsiveMargin" title="RequestCreation" horizontalScrolling="false" verticalScrolling="false"                  >
+		<l:VerticalLayout class="sapUiResponsiveMargin">
+			<l:VerticalLayout >
+				<Label text="Country" class="sapUiSmallMarginEnd sapUiSmallMarginTop"></Label>
+				<ComboBox id="com1" items="{ path: '/SalesOrderSet' }">
+					<core:Item key="{SalesOrderID}" text="{SalesOrderID}"/>
+				</ComboBox>
+			</l:VerticalLayout>
+			<l:VerticalLayout >
+				<Label text="Customer" class="sapUiSmallMarginEnd sapUiSmallMarginTop"></Label>
+				<ComboBox id="com2" items="{ path: '/ProductSet'}">
+					<core:Item key="{SupplierName}" text="{SupplierID}"/>
+				</ComboBox>
+			</l:VerticalLayout>
+		</l:VerticalLayout>
+		<beginButton>
+			<Button text="Cancel" press=".onCancel"/>
+		</beginButton>
+		<endButton>
+			<Button text="Next" press=".onSubmit"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,213 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.RequestCreation"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:u="sap.ui.unified">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<f:Form id="FormR" editable="true" class="Form sapUiSmallMarginBottom">
+						<f:layout>
+							<f:ResponsiveGridLayout singleContainerFullSize="false" columnsL="1" columnsM="1" labelSpanL="4" labelSpanM="1"/>
+						</f:layout>
+						<f:formContainers>
+							<f:FormContainer >
+								<f:formElements>
+									<f:FormElement >
+										<f:fields>
+											<VBox class="sapUiSmallMarginEnd">
+												<layoutData>
+													<layout:GridData span="L3 M2 S12"/>
+												</layoutData>
+												<Label text="Country" class="col txtfont"></Label>
+												<Label text="BU" class="col"></Label>
+												<ComboBox class="CustName" placeholder="Select BU" selectionChange="handleBUSelectionChange" width="100%">
+													<core:Item key="XXXX" text="XXXXX"/>
+													<core:Item key="YYYY" text="YYYYY"/>
+													<core:Item key="ZZZZ" text="ZZZZZ"/>
+													<core:Item key="DDDD" text="DDDDD"/>
+												</ComboBox>
+											</VBox>
+											<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd">
+												<layoutData>
+													<layout:GridData span="L2 M3 S12"/>
+												</layoutData>
+												<HBox>
+													<Label text="Country :" class="col"></Label>
+													<Label text="ASD" class="sapUiTinyMarginBeginEnd col"></Label>
+												</HBox>
+												<HBox>
+													<Label text="Customer :" class="col"></Label>
+													<Label text="1234567890" class="col sapUiTinyMarginBeginEnd"></Label>
+												</HBox>
+											</VBox>
+											<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd">
+												<layoutData>
+													<layout:GridData span="L5 M3 S12"/>
+												</layoutData>
+												<HBox >
+													<Label text="Country :" class="col"></Label>
+													<Label text="ASD" class="sapUiTinyMarginBeginEnd col"></Label>
+												</HBox>
+												<HBox>
+													<Label text="Customer :" class="col"></Label>
+													<Label text="1234567890" class="col sapUiTinyMarginBeginEnd"></Label>
+												</HBox>
+											</VBox>
+											<VBox class="sapUiLargeMarginTop sapUiSmallMarginBeginEnd">
+												<layoutData>
+													<layout:GridData span="L2 M3 S12"/>
+												</layoutData>
+												<CheckBox selected="true" class="chk col" editable="false" text="Global Submission"></CheckBox>
+											</VBox>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+							</f:FormContainer>
+						</f:formContainers>
+					</f:Form>
+					<List items="{path: '/Products'}">
+						<CustomListItem>
+							<Panel>
+								<headerToolbar>
+									<Toolbar>
+										<Title level="H2" text="{title}"/>
+									</Toolbar>
+								</headerToolbar>
+								<Table id="table" inset="false" items="{ path: 'items', templateShareable:true}">
+									<columns>
+										<Column >
+											<Text text="Code"/>
+											<footer>
+												<Label text="Total Value"></Label>
+											</footer>
+										</Column>
+										<Column demandPopin="true">
+											<Text text="Case"/>
+										</Column>
+										<Column demandPopin="true">
+											<Text text="BCP"/>
+											<footer>
+												<Label design="Bold" text="{ path: 'items', formatter: '.formatter.getBCP' }"></Label>
+											</footer>
+										</Column>
+										<Column >
+											<Text text="BPP"/>
+											<footer>
+												<Label design="Bold" text="{ path: 'items', formatter: '.formatter.getBPP' }"></Label>
+												<!--<Label text="123213"></Label>-->
+											</footer>
+										</Column>
+										<Column demandPopin="true">
+											<Text text="Mov"/>
+											<footer>
+												<Label design="Bold" text="{ path: 'items', formatter: '.formatter.getMov' }"></Label>
+												<!--<Label text="123123123"></Label>-->
+											</footer>
+										</Column>
+										<Column demandPopin="true">
+											<Text text="Number"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text="{code}"/>
+												<Text text="{Case}"/>
+												<Text text="{BCP}"/>
+												<Text text="{BPP}"/>
+												<Text text="{Mov}"/>
+												<Text text="{Number}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</CustomListItem>
+					</List>
+					<!--	<Panel>
+						<headerToolbar>
+							<Toolbar>
+								<Title level="H2" text="Drafts(Summm)"/>
+							</Toolbar>
+						</headerToolbar>
+						<Table id="idProductsTabll" inset="false" items="{ path: '/Country1'}" 
+							class="sapUiMediumMarginBottom">
+							<columns>
+								<Column>
+									<Text text="Code"/>
+									<footer>
+										<Label text="Total Value"></Label>
+									</footer>
+								</Column>
+								<Column demandPopin="true">
+									<Text text="Case"/>
+								</Column>
+								<Column demandPopin="true">
+									<Text text="BCP"/>
+									<footer>
+										<Label text="1123123"></Label>
+									</footer>
+								</Column>
+								<Column >
+									<Text text="BPP"/>
+									<footer>
+										<Label text="123213"></Label>
+									</footer>
+								</Column>
+								<Column demandPopin="true">
+									<Text text="Mov"/>
+									<footer>
+										<Label text="123123123"></Label>
+									</footer>
+								</Column>
+								<Column demandPopin="true">
+									<Text text="Number"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{code}"/>
+										<Text text="{Case}"/>
+										<Text text="{BCP}"/>
+										<Text text="{BPP}"/>
+										<Text text="{Mov}"/>
+										<Text text="{Number}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</Panel>-->
+					<f:SimpleForm editable="true">
+						<f:content>
+							<VBox>
+								<HBox class="sapUiMediumMarginBottom">
+									<u:FileUploader id="idfileUploaderrr" width="100%" sameFilenameAllowed="false" placeholder="Choose a CSV file" style="Emphasized"></u:FileUploader>
+									<Button text="Upload" press="onUpload" class="sapUiTinyMarginBegin"></Button>
+								</HBox>
+								<Button text="view Details" class="sapUiMediumMarginBottom"/>
+								<Panel>
+									<headerToolbar>
+										<Toolbar>
+											<Title level="H2" text="Feedback"/>
+										</Toolbar>
+									</headerToolbar>
+									<TextArea id="TextAreass" cols="100" height="100px"/>
+								</Panel>
+								<FlexBox alignItems="End" justifyContent="End">
+									<items>
+										<Button text="Ask For Feedback" class="sapUiSmallMarginEnd"/>
+										<Button text="Upload File" class="sapUiSmallMarginEnd"/>
+										<Button text="Download" press=".onSubmitpress" class="sapUiSmallMarginEnd"/>
+										<Button text="Give Comment" class="sapUiSmallMarginEnd"/>
+										<Button text="Cancel" class="sapUiSmallMarginEnd"/>
+										<Button text="Approve" press=".onSubmitpress"/>
+									</items>
+								</FlexBox>
+							</VBox>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

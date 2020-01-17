@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.tab2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<IconTabBar id="GroupIcon" applyContentPadding="false" select=".onGroupSelect" expandable="false">
+		<items>
+			<IconTabFilter text="Tab31" key="tab31" id="Tab31"></IconTabFilter>
+			<IconTabFilter text="Tab32" key="tab32" id="Tab32"></IconTabFilter>
+			<IconTabFilter text="Tab33" key="tab33" id="Tab33"></IconTabFilter>
+		</items>
+	</IconTabBar>
+	<Table id="idProductsTabldd" updateFinished=".onUpdateFinished" items="{ path: '/ProductCollection'}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Products" level="H2"/>
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column width="12em">
+				<Text text="Product"/>
+			</Column>
+			<Column demandPopin="true">
+				<Text text="Supplier"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Dimensions"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="SupplierName"/>
+			</Column>
+	<!--		<Column demandPopin="true" hAlign="Center" mergeDuplicates="true">
+				<Text text="Year"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Month"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Date"/>
+			</Column>-->
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation" press=".onCPSReqItemPress">
+				<cells>
+					<Link text="{ProductId}" emphasized="true"/>
+					<Text text="{Name}"/>
+					<Text text="{Width} x {Depth} x {Height}"/>
+					<Text text="{SupplierName}"></Text>
+			<!--		<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'yyyy-MM' }}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'MM' }}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'yyyy-MM-dd' }}"></Text>
+				--></cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>

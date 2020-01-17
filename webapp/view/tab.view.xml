@@ -1,0 +1,99 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.tab"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<l:BlockLayout id="BlockLayout">
+		<l:BlockLayoutRow accentCells="Accent1">
+			<l:BlockLayoutCell id="Accent1" width="65%">
+				<Panel headerText="Row1">
+					<headerToolbar>
+						<Toolbar>
+							<Title level="H4" text="Commets" class="titlefont"/>
+						</Toolbar>
+					</headerToolbar>
+					<Text text="{i18n>titleHome}" class="txtfont sapUiSmallMarginTopBottom"></Text>
+					<Text text="{i18n>text}"></Text>
+					<Text text="{i18n>titleHome}" class="txtfont sapUiSmallMarginTopBottom"></Text>
+					<Text text="{i18n>text}"></Text>
+					<Text text="{i18n>titleHome}" class="txtfont sapUiSmallMarginTopBottom"></Text>
+					<Text text="{i18n>text}"></Text>
+				</Panel>
+				<Panel >
+					<headerToolbar>
+						<Toolbar>
+							<Title level="H2" text="Commets" class="titlefont"/>
+						</Toolbar>
+					</headerToolbar>
+					<ObjectIdentifier text="{i18n>text}" title="{i18n>titleHome}"></ObjectIdentifier>
+					<!--<Text text="{i18n>titleHome}" class="txtfont sapUiSmallMarginTopBottom"></Text>
+					<Text text="{i18n>text}"></Text>-->
+				</Panel>
+			</l:BlockLayoutCell>
+			<l:BlockLayoutCell width="35%">
+				<Panel headerText="Row1">
+					<headerToolbar>
+						<Toolbar>
+							<Title text="Links" class="titlefont"/>
+						</Toolbar>
+					</headerToolbar>
+					<Link text="www.tcs.com/auth/asdfasdfasdf" target="_blank" href="http://www.sap.com"></Link>
+					<Label text="Link Decsription To solve all the buzzels" class="sapUiSmallMarginBottom"></Label>
+					<Link text="www.tcs.com/auth/asdfasdfasdf" target="_blank" href="http://www.sap.com"></Link>
+					<Label text="Link Decsription To solve all the buzzels" class="sapUiSmallMarginBottom"></Label>
+					<Link text="www.tcs.com/auth/asdfasdfasdf" target="_blank" href="http://www.sap.com"></Link>
+					<Label text="Link Decsription To solve all the buzzels" class="sapUiSmallMarginBottom"></Label>
+					<Link text="www.tcs.com/auth/asdfasdfasdf" target="_blank" href="http://www.sap.com"></Link>
+					<Label text="Link Decsription To solve all the buzzels" class="sapUiSmallMarginBottom"></Label>
+					<Link text="www.tcs.com/auth/asdfasdfasdf" target="_blank" href="http://www.sap.com"></Link>
+					<Label text="Link Decsription To solve all the buzzels" class="sapUiSmallMarginBottom"></Label>
+					<Link text="www.tcs.com/auth/asdfasdfasdf" target="_blank" href="http://www.sap.com"></Link>
+					<Label text="Link Decsription To solve all the buzzels" class="sapUiSmallMarginBottom"></Label>
+				</Panel>
+			</l:BlockLayoutCell>
+		</l:BlockLayoutRow>
+	</l:BlockLayout>
+	<!--<Page title="Title" showHeader="false">
+			<content>
+				<HBox>
+					<VBox width="70%" class="sapUiLargeMarginEnd">
+						<Panel headerText="Row1">
+							<headerToolbar>
+								<Toolbar>
+									<Title level="H4" text="Commets" class="titlefont"/>
+								</Toolbar>
+							</headerToolbar>
+							<Text text="This is Headeing of this particular text." class="txtfont sapUiMediumMarginTop sapUiSmallMarginBottom"></Text>
+							<Text
+								text="Born on 12 October 1864 in the village of Basanda, then in Bakergunj District of Bengal Presidency and now in Barisal District of Bangladesh, Roy joined Bethune School in 1883. One of the first girls to attend school in British India, she earned a Bachelor of Arts degree with Sanskrit honours from Bethune College of the University of Calcutta in 1886 and started teaching there in the same year. Kadambini Ganguly, one of the first two women honours graduates ever in the country, was three years senior to her in the same institution."></Text>
+							<Text text="This is Headeing of this particular text." class="txtfont sapUiSmallMarginTopBottom"></Text>
+							<Text
+								text="Born on 12 October 1864 in the village of Basanda, then in Bakergunj District of Bengal Presidency and now in Barisal District of Bangladesh, Roy joined Bethune School in 1883. One of the first girls to attend school in British India, she earned a Bachelor of Arts degree with Sanskrit honours from Bethune College of the University of Calcutta in 1886 and started teaching there in the same year. Kadambini Ganguly, one of the first two women honours graduates ever in the country, was three years senior to her in the same institution."></Text>
+						</Panel>
+						<Panel headerText="Row1">
+							<headerToolbar>
+								<Toolbar>
+									<Title level="H2" text="Commets" class="titlefont"/>
+								</Toolbar>
+							</headerToolbar>
+							<Text text="This is Headeing of this particular text." class="txtfont sapUiMediumMarginTop sapUiSmallMarginBottom"></Text>
+							<Text
+								text="Born on 12 October 1864 in the village of Basanda, then in Bakergunj District of Bengal Presidency and now in Barisal District of Bangladesh, Roy joined Bethune School in 1883. One of the first girls to attend school in British India, she earned a Bachelor of Arts degree with Sanskrit honours from Bethune College of the University of Calcutta in 1886 and started teaching there in the same year. Kadambini Ganguly, one of the first two women honours graduates ever in the country, was three years senior to her in the same institution."></Text>
+							<Text text="This is Headeing of this particular text." class="txtfont sapUiSmallMarginTopBottom"></Text>
+							<Text
+								text="Born on 12 October 1864 in the village of Basanda, then in Bakergunj District of Bengal Presidency and now in Barisal District of Bangladesh, Roy joined Bethune School in 1883. One of the first girls to attend school in British India, she earned a Bachelor of Arts degree with Sanskrit honours from Bethune College of the University of Calcutta in 1886 and started teaching there in the same year. Kadambini Ganguly, one of the first two women honours graduates ever in the country, was three years senior to her in the same institution."></Text>
+						</Panel>
+					</VBox>
+					<VBox width="30%" class="sapUiLargeMarginBegin sapUiLargeMarginTop">
+						<Label text="Link Decsription To solve all the buzzels"></Label>
+						<Link text="www.tcs.com/auth/asdfasdfasdf" class="sapUiTinyMarginBottom"></Link>
+						<Label text="Link Decsription"></Label>
+						<Link text="www.tcs.com/auth/asdfasdfasdfa" class="sapUiTinyMarginBottom"></Link>
+						<Label text="Link Decsription"></Label>
+						<Link text="www.tcs.com/auth/asdfasdfasdfas" class="sapUiTinyMarginBottom"></Link>
+						<Label text="Link Decsription"></Label>
+						<Link text="www.tcs.com/auth/asdfdasfasdf" class="sapUiTinyMarginBottom"></Link>
+						<Label text="Link Decsription"></Label>
+						<Link text="www.tcs.com/auth/asdfdasfasdf" class="sapUiTinyMarginBottom"></Link>
+					</VBox>
+				</HBox>
+			</content>
+		</Page>-->
+</mvc:View>

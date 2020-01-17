@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="iconT.IconT.controller.Subtab2.tab23" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<Page showHeader="false" class="sapUiResponsiveMargin">
+			<HBox>
+				<ComboBox class="sapUiSmallMarginEnd">
+					<core:Item key="{SalesOrderID}" text="{SalesOrderID}"/>
+				</ComboBox>
+				<Button text="Update" press=".onUpdate"></Button>
+			</HBox>
+		</Page>
+	</App>
+</mvc:View>

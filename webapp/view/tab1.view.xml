@@ -1,0 +1,12 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.tab1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<IconTabBar  applyContentPadding="false" id="idIconTab2Bar" select=".onTabSelect" expandable="false">
+		<items>
+			<IconTabFilter text="Tab21" key="tab21" id="tab21" >
+				<mvc:XMLView viewName="iconT.IconT.view.Subtab2.tab21"></mvc:XMLView>
+			</IconTabFilter>
+			<IconTabFilter text="Tab22" key="tab22" id="tab22"></IconTabFilter>
+			<IconTabFilter text="Tab23" key="tab23" id="tab23"></IconTabFilter>
+		</items>
+	</IconTabBar>
+</mvc:View>

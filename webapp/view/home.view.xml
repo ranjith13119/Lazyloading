@@ -1,0 +1,15 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.home"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+		<IconTabBar applyContentPadding="false" id="idIconTabBarNoIcons" class=" icon1" select=".onTabSelect" expandable="false">
+			<items>
+				<IconTabFilter text="Tab1" key="tab">
+					<mvc:XMLView viewName="iconT.IconT.view.tab"></mvc:XMLView>
+				</IconTabFilter>
+				<IconTabFilter text="Tab2" key="tab2" id="tab2"></IconTabFilter>
+				<IconTabFilter text="Tab3" key="tab3" id="tab3"></IconTabFilter>
+				<IconTabFilter text="Tab4" key="tab4" id="tab4"></IconTabFilter>
+			</items>
+		</IconTabBar>
+	</ScrollContainer>
+</mvc:View>

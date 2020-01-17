@@ -1,0 +1,46 @@
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: 0px !important;
+}
+
+.chk.sapMCb.sapMCbRo .sapMCbBg {
+    background-color: blue !important;
+    border-color: blue !important;
+}
+
+.chk.sapMCbRo>.sapMCbBg.sapMCbMarkChecked:before {
+    color: black;
+}
+
+.Form {
+    background-color: black !important;
+}
+
+.col, .chk.sapMCb .sapMLabel {
+    color: white !important;
+}
+
+.icon1 .sapMITH {
+    background-color: black;
+    border: 0rem solid black;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.15), inset 0 -0.0625rem 0 0 !important;
+}
+
+.icon1 .sapMITBSelected>.sapMITBContentArrow::after {
+    background: white;
+}
+
+.icon1 .sapMITBTextOnly .sapMITBFilterDefault>.sapMITBText {
+    color: white;
+}
+
+.txtfont {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 800;
+}
+
+.titlefont {
+    font-size: 1.4rem !important;
+    color: black;
+    font-weight: 800;
+}

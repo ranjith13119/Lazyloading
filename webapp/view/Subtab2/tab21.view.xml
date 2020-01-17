@@ -1,0 +1,154 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="iconT.IconT.controller.Subtab2.tab21"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:variant="sap.ui.comp.variants">
+	<Table id="idProductsTable" items="{ path: '/ProductSet'}">
+		<headerToolbar >
+			<OverflowToolbar class="sapUiTinyMarginTop">
+				<content>
+					<Title text="Products" level="H2"/>
+					<variant:VariantManagement variantItems="{variant>/Variants}" select="onSelect" save="onSaveAs" enabled="true" manage="onManage"
+						showExecuteOnSelection="true" showShare="true" id="Variants">
+						<variant:variantItems>
+							<variant:VariantItem text="{variant>Name}" key="{variant>Key}"/>
+						</variant:variantItems>
+					</variant:VariantManagement>
+					<ToolbarSpacer/>
+					<ComboBox id="idPopinLayout" placeholder="Select Value"  selectionChange="onSearch">
+						<items>
+							<core:Item text="All" key="All"/>
+							<core:Item text="HT-1042" key="HT-1042"/>
+							<core:Item text="HT-1050" key="HT-1050"/>
+							<core:Item text="HT-1051" key="HT-1051"/>
+						</items>
+					</ComboBox>
+					<ComboBox id="idPopinLayoutt" placeholder="Select Value" selectionChange="onSearch">
+						<items>
+							<core:Item text="Block" key="Block"/>
+							<core:Item text="Grid Large" key="GridLarge"/>
+							<core:Item text="Grid Small" key="GridSmall"/>
+						</items>
+					</ComboBox>
+					<ComboBox id="idPopinLayouttt" placeholder="Select Value" selectionChange="onSearch">
+						<items>
+							<core:Item text="Block" key="Block"/>
+							<core:Item text="Grid Large" key="GridLarge"/>
+							<core:Item text="Grid Small" key="GridSmall"/>
+						</items>
+					</ComboBox>
+					<Button icon="sap-icon://sort" press=".onSortPress"></Button>
+					<Button icon="sap-icon://group-2" press=".onGroupPress"></Button>
+					<Button icon="sap-icon://action-settings" press="onPersoButtonPressed">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</layoutData>
+					</Button>
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column id="product" width="12em">
+				<Text text="Product"/>
+			</Column>
+			<Column id="Supplier" demandPopin="true">
+				<Text text="Supplier"/>
+			</Column>
+			<Column id="Dimensions" demandPopin="true" hAlign="Center">
+				<Text text="Dimensions"/>
+			</Column>
+			<Column id="SupplierName" demandPopin="true" hAlign="Center">
+				<Text text="SupplierName"/>
+			</Column>
+			<Column id="Year" demandPopin="true" hAlign="Center">
+				<Text text="Year"/>
+			</Column>
+			<Column id="Month" demandPopin="true" hAlign="Center">
+				<Text text="Month"/>
+			</Column>
+			<Column id="Date" demandPopin="true" hAlign="Center">
+				<Text text="Date"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation" press=".onCPSReqItemPress">
+				<cells>
+					<Link text="{ProductID}" emphasized="true" press=".onCPSReqItemPress"/>
+					<Text text="{Name}"/>
+					<Text text="{Width} x {Depth} x {Height}"/>
+					<Text text="{SupplierName}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'yyyy.MM' }}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'MM' }}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'yyyy.MM.dd' }}"></Text>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+<!--		<Table id="idProductsTable" items="{ path: '/ProductSet'}">
+		<headerToolbar >
+			<OverflowToolbar class="sapUiTinyMarginTop">
+				<content>
+					<Title text="Products" level="H2" />
+					<ToolbarSpacer/>
+					<ComboBox id="idPopinLayout" placeholder="Select Value" change="onPopinLayoutChanged">
+						<items>
+							<core:Item text="Block" key="Block"/>
+							<core:Item text="Grid Large" key="GridLarge"/>
+							<core:Item text="Grid Small" key="GridSmall"/>
+						</items>
+					</ComboBox>
+					<ComboBox id="idPopinLayoutt" placeholder="Select Value" change="onPopinLayoutChanged">
+						<items>
+							<core:Item text="Block" key="Block"/>
+							<core:Item text="Grid Large" key="GridLarge"/>
+							<core:Item text="Grid Small" key="GridSmall"/>
+						</items>
+					</ComboBox>
+					<ComboBox id="idPopinLayouttt" placeholder="Select Value" change="onPopinLayoutChanged">
+						<items>
+							<core:Item text="Block" key="Block"/>
+							<core:Item text="Grid Large" key="GridLarge"/>
+							<core:Item text="Grid Small" key="GridSmall"/>
+						</items>
+					</ComboBox>
+					<Button icon="sap-icon://sort" press=".onSortPress"></Button>
+					<Button icon="sap-icon://group-2" press=".onGroupPress"></Button>
+					<Button icon="sap-icon://action-settings" press=".onSettingPress"></Button>
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column width="12em">
+				<Text text="Product"/>
+			</Column>
+			<Column demandPopin="true">
+				<Text text="Supplier"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Dimensions"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="SupplierName"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Year"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Month"/>
+			</Column>
+			<Column demandPopin="true" hAlign="Center">
+				<Text text="Date"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation" press=".onCPSReqItemPress">
+				<cells>
+					<Link text="{ProductID}" emphasized="true" press=".onCPSReqItemPress"/>
+					<Text text="{Name}"/>
+					<Text text="{Width} x {Depth} x {Height}"/>
+					<Text text="{SupplierName}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'yyyy.MM' }}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'MM' }}"></Text>
+					<Text text="{path : 'CreatedAt',type:'sap.ui.model.type.Date',formatOptions: { pattern: 'yyyy.MM.dd' }}"></Text>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>-->
+</mvc:View>
